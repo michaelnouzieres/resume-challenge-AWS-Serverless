@@ -16,7 +16,7 @@ export default function Header() {
         <NavLink className="hover:text-white" to="links">
           Links
         </NavLink>
-        <NavLink className="hover:text-white" to="links">
+        <NavLink className="hover:text-white" to="stats">
           Stats
         </NavLink>
       </nav>

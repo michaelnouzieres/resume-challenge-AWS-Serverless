@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Technology from "./pages/Technology.jsx";
 import Links from "./pages/Links.jsx";
+import Stats from "./pages/Stats.jsx";
 
 function App() {
   const router = createBrowserRouter([
@@ -17,6 +18,7 @@ function App() {
         { path: "about", Component: About },
         { path: "technology", Component: Technology },
         { path: "links", Component: Links },
+        { path: "stats", Component: Stats},
       ],
     },
   ]);
