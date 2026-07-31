@@ -1,10 +1,16 @@
 const express = require("express");
 const cors = require("cors");
 
-const visitorRoutes = require("./routes/visitorRoutes.js");
+const visitorController = require("./controllers/visitorController.js");
 
-const app = express();
-
-app.use(express.json());
-
-app.use(cors());
+export const handler = async (event) => {
+  try {
+    const response = await visitorController.addCount();
+    return response;
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ message: error.message }),
+    };
+  }
+};
