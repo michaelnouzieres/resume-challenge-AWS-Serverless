@@ -30,7 +30,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: frontend
-        run: npm install --production
+        run: npm install
 
       - name: Create .env.production
         working-directory: frontend
