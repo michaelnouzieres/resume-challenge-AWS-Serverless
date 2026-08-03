@@ -16,6 +16,7 @@ export default function Stats() {
     );
 
     const data = await response.json();
+    console.log(data);
     setCount(data.counter);
   }
 
