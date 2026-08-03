@@ -17,7 +17,7 @@ exports.incrementCount = async () => {
 
   try {
     const response = await docClient.send(new UpdateCommand(params));
-    const counter = response.Attributes.counter;
+    const counter = response.Attributes.c;
     return counter;
     console.log(response);
   } catch (error) {
