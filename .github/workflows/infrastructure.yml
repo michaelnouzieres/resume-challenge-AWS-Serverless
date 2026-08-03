@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd backend
-          npm ci --production
+          npm ci --omit=dev
 
       - name: authenticate OIDC
         uses: aws-actions/configure-aws-credentials@v4
