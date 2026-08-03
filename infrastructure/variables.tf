@@ -12,6 +12,3 @@ variable "domain_name" {
   type = string
 }
 
-variable "TABLE_NAME" {
-  type = string
-}

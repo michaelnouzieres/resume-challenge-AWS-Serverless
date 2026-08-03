@@ -43,19 +43,19 @@ resource "aws_iam_role_policy" "dynamodb_access" {
 
 
 # Package the Lambda function code
-data "archive_file" "example" {
+data "archive_file" "counter_lambda" {
   type        = "zip"
   source_dir = "${path.module}/../backend"
   output_path = "${path.module}/visitor-function.zip"
 }
 
 # Lambda function
-resource "aws_lambda_function" "example" {
-  filename      = data.archive_file.example.output_path
+resource "aws_lambda_function" "counter_lambda" {
+  filename      = data.archive_file.counter_lambda.output_path
   function_name = "visitor_lambda_function"
   role          = aws_iam_role.counter_lambda_role.arn
   handler       = "app.handler"
-  source_code_hash   = data.archive_file.example.output_base64sha256
+  source_code_hash   = data.archive_file.counter_lambda.output_base64sha256
 
   runtime = "nodejs22.x"
 

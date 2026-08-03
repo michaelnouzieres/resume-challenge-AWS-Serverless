@@ -22,6 +22,12 @@ module "acm" {
 
 module "lambda" {
   source = "./modules/lambda"
-  TABLE_NAME = var.TABLE_NAME
+  TABLE_NAME = module.dynamodb.TABLE_NAME
   dynamodb_table_arn = module.dynamodb.dynamodb_table_arn
+}
+
+module "api" {
+  source = "./modules/apigw"
+  lambda_ivk_arn = module.lambda.function_ivk_arn
+  lambda_name = module.lambda.function_name
 }
