@@ -8,6 +8,7 @@ module "route53" {
 module "cloudfront" {
   source = "./modules/cloudfront"
   certificate_arn = module.acm.certificate_arn
+  domain_name = var.domain_name
 }
 
 module "dynamodb"{

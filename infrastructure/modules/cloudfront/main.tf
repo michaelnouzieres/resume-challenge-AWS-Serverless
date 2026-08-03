@@ -65,6 +65,8 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
   ssl_support_method = "sni-only"
   }
+
+  aliases = [var.domain_name, "${var.domain_name}"]
 }
 
 # 4. IAM S3 CloudFront (OAC) 
