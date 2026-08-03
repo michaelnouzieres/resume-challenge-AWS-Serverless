@@ -7,7 +7,7 @@ exports.incrementCount = async () => {
     Key: {
       id: "global_counter",
     },
-    UpdateExpression: "SET counter = if_not_exists(counter, :zero) + :incr",
+    UpdateExpression: "SET c = if_not_exists(c, :zero) + :incr",
     ExpressionAttributeValues: {
       ":incr": 1,
       ":zero": 0,
