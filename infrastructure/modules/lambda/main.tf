@@ -45,7 +45,7 @@ resource "aws_iam_role_policy" "dynamodb_access" {
 # Package the Lambda function code
 data "archive_file" "counter_lambda" {
   type        = "zip"
-  source_dir = "${path.module}/../../backend"
+  source_dir = "${path.module}/../../../backend"
   output_path = "${path.module}/visitor-function.zip"
 }
 
