@@ -3,7 +3,7 @@ const cors = require("cors");
 
 const visitorController = require("./controllers/visitorController.js");
 
-export const handler = async (event) => {
+exports.handler = async (event) => {
   const corsHeaders = {
     "Access-Control-Allow-Origin": "https://michaelnouzieres.com",
     "Access-Control-Allow-Methods": "POST, OPTIONS",
