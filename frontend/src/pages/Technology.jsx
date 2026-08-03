@@ -61,20 +61,20 @@ export default function Technology() {
       </section>
       <section className="hidden max-w-5xl mx-auto py-5  lg:grid gap-6 lg:grid-cols-5">
         <div className="bg-white rounded-md p-2">
-          <img src="/public/images.png" alt="node" />
+          <img src="/images.png" alt="node" />
         </div>
         <div className="bg-white rounded-md p-2">
-          <img src="/public/node-js-logo-png_seeklogo-480560.png" alt="node" />
+          <img src="/node-js-logo-png_seeklogo-480560.png" alt="node" />
         </div>
         <div className="bg-white rounded-md p-2">
-          <img src="/public/images (1).png" alt="node" />
+          <img src="/images (1).png" alt="node" />
         </div>
         <div className="bg-white rounded-md p-2">
-          <img src="/public/images (2).png" alt="node" />
+          <img src="/images (2).png" alt="node" />
         </div>
         <div className="bg-white rounded-md p-2">
           <img
-            src="/public/amazon-web-services-aws-logo-png_seeklogo-319188.png"
+            src="/amazon-web-services-aws-logo-png_seeklogo-319188.png"
             alt="node"
           />
         </div>
