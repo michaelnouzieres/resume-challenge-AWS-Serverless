@@ -47,8 +47,10 @@ jobs:
           terraform_wrapper: false
 
       - name: initialize
+        working-directory: infrastructure
         run: terraform init
       - name: generate plan
+        working-directory: infrastructure
         run: terraform plan -out=tfplan
         env:
           TF_VAR_domain_name: ${{secrets.DOMAIN_NAME}}
