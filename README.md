@@ -29,8 +29,6 @@ The entire infrastructure is provisioned automatically using Terraform, while Gi
 
 # 🏗 Architecture
 
-> _(Insert architecture diagram here)_
-
 ```
                    Internet
                        │
